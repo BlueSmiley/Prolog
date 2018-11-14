@@ -1,0 +1,14 @@
+s --> s0(0,0,0,0,0,0,0,0,0).
+s0(1,1,1,1,1,1,1,1,1) --> [].
+s0(A,B,C,D,E,F,G,H,I) --> col(A,B,C,X,Y,Z),s1(X,Y,Z,D,E,F,G,H,I).
+s1(A,B,C,D,E,F,G,H,I) --> nat(D,E,F,X,Y,Z),s2(A,B,C,X,Y,Z,G,H,I).
+s2(A,B,C,D,E,F,G,H,I) --> pet(G,H,I,X,Y,Z),s0(A,B,C,D,E,F,X,Y,Z).
+col(0,B,C,1,B,C) --> [red].
+col(A,0,C,A,1,C) --> [blue].
+col(A,B,0,A,B,1) --> [green].
+nat(0,B,C,1,B,C) --> [english].
+nat(A,0,C,A,1,C) --> [spanish].
+nat(A,B,0,A,B,1) --> [japanese].
+pet(0,B,C,1,B,C) --> [jaguar].
+pet(A,0,C,A,1,C) --> [snail].
+pet(A,B,0,A,B,1) --> [zebra].
